@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="kolekcjonowanie.Views.MainPage">
+
+    <VerticalStackLayout>
+        <CollectionView x:Name="collectionView"
+            ItemsSource="{Binding Collections}"
+            Margin="20"
+            SelectionMode="Single"
+            SelectionChanged="collectioniew_SelectionChanged">
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Label Text="{Binding FileName}"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Editor x:Name="editor"/>
+        <Button Text="Add collection" Clicked="addCollection"/>
+    </VerticalStackLayout>
+
+</ContentPage>

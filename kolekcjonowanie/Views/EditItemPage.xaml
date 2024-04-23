@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="kolekcjonowanie.Views.EditItemPage"
+             Title="EditItemPage">
+    <VerticalStackLayout>
+        <Editor x:Name="editor"
+                HeightRequest="100"/>
+
+        <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
+            <Button Grid.Column="0"
+            Text="Edit"
+            Clicked="EditButton_Clicked"/>
+
+            <Button Grid.Column="1"
+            Text="Delete"
+            Clicked="DeleteButton_Clicked"/>
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
