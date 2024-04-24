@@ -6,7 +6,7 @@ namespace kolekcjonowanie.Views
 {
     public partial class MainPage : ContentPage
     {
-        public string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "/collections/");
+        public string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "collections");
         public ObservableCollection<Models.Collection> Collections { get; set; } = new ObservableCollection<Models.Collection>();
 
         public MainPage()
@@ -15,7 +15,7 @@ namespace kolekcjonowanie.Views
             BindingContext = this;
             readCollections();
             Directory.CreateDirectory(path);
-            Trace.WriteLine("Ścieżka: " + AppDomain.CurrentDomain.BaseDirectory + "collections\\");
+            Trace.WriteLine(path);
         }
 
         public void readCollections()
