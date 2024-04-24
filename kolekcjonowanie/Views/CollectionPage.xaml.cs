@@ -10,7 +10,7 @@ public partial class CollectionPage : ContentPage
 {
     private MainPage _mainPage;
     private Models.Collection _collection;
-    public string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "/collections/");
+    public string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "collections");
 
     public ObservableCollection<Models.Item> ItemsCollection { get; set; } = new ObservableCollection<Models.Item>();
 
